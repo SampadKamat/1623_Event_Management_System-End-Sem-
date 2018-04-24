@@ -1,3 +1,7 @@
+/*Roll Number: 1623
+ * */
+//AFTER REFACTORING
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -15,22 +19,31 @@ public class ClientTest {
 	public void testHall_bill() {
 		//fail("Not yet implemented");
 		c1.hallBooking("large hall",300,"music","light");
-		assertEquals(21000,c1.hall_bill());
+		assertEquals(18000,c1.hall_bill());
+	}
+	
+	public void testtotal_bill1(){
+		//fail("Not yet implemented");
+		c1.hallBooking("large hall",300,"music","light");
+		c1.Catering("veg",220,"ice cream","soup");
+		c1.Transport("Bus","AC",30,5);
+		assertEquals(18000,c1.total_bill1());
 	}
 
-	/*@Test
+
+	@Test
 	public void testCatering_bill() {
 		//fail("Not yet implemented");
-		c1.Catering("veg",220,"ice cream","soup");
-		assertEquals(18000,c1.catering_bill());
+		c1.Catering("veg",220,"ice cream","soup");;
+		assertEquals(13200,c1.catering_bill());
 	}
 
 	@Test
 	public void testTransport_bill() {
 		//fail("Not yet implemented");
 		c1.Transport("Bus","AC",30,5);
-		assertEquals(36000,c1.transport_bill());
-	}*/
+		assertEquals(3600,c1.transport_bill());
+	}
 
 	@Test
 	public void testGetUsername() {
